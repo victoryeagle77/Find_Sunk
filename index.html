@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,maximum-scale=1">
+    <link href="./css/main.css"  rel="stylesheet" media="all">
+    <link href="./css/game.css"  rel="stylesheet" media="all">
+    <link href="./css/button.css"  rel="stylesheet" media="all">
+    <link href="./img/fs.png" rel="icon" type="image/png">
+    <title>Find - Sunk</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="logo">
+        <img id="haut" src="./img/game_logo.png" alt="logo">
+      </div>
+
+        <br><div id="rule">
+          Le but de la bataille navale consiste à couler les 5 bateaux de votre adversaire. 
+            Ces-derniers sont positionnés verticalement ou horizontalement, sur une grille de 100 cases, et occupent un espace de 2 à 5 cases. 
+            La flotte ennemie est composée des mêmes 5 bateaux disponibles au sein de votre flotte, et occupent un espace spécifique en fonction de leur attribution.
+            Disposez-les sur votre grille, puis cliquez sur la grille de l'adversaire pour détruire les vaisseaux ennemis.
+
+            <br><br><b>&#8226;&ensp; Porte-avions : </b> Occupant 5 cases
+            <br><b>&#8226;&ensp; Croiseur : </b> Occupant 4 cases
+            <br><b>&#8226;&ensp; Destroyer :</b> Occupant 3 cases
+            <br><b>&#8226;&ensp; Sous-marin : </b> Occupant 3 cases
+            <br><b>&#8226;&ensp; Patrouilleur : </b> Occupant 2 cases
+        </div>
+
+        <br><br><audio autoplay="autoplay" controls="controls">
+          <source src="./sound/Find-Sunk.mp3">
+        </audio>
+
+        <div class="game">
+
+          <div id="reload" class="hidden">
+            <h3>Nouvelle partie</h3>
+            <button id="restart">Réessayer</button>
+          </div>
+
+          <div id="rotate">
+            <h3>Placement flotte</h3>
+            <ul class="fleet">
+              <li id="patrouilleur">Patrouilleur</li> 
+              <li id="sous_marin">Sous-marin</li>
+              <li id="destroyer">Destroyer</li>
+              <li id="croiseur">Croiseur</li>
+              <li id="porte_avions">Porte-avions</li>
+            </ul>
+            <button id="rotation" data-direction="0">Rotation</button>
+            <button id="start" class="hidden">Commencer</button>
+          </div>
+
+          <div class="area">
+            <div class="title"><h3>JOUEUR</h3></div>
+            <br><div class="grid player">
+              <span class="error">Pas de pluging JavaScript. Installez en un, activez le ou changez de navigateur</span>
+            </div>
+          </div>
+
+          <div class="area">
+            <div class="title"><h3>ADVERSAIRE</h3></div>
+            <br><div class="grid AI">
+
+              <span class="error">Pas de pluging JavaScript. Installez en un, activez le ou changez de navigateur</span>
+            </div>
+          </div>
+        </div>
+      <br>
+    </div>
+
+    <p><br><br></p>
+    <footer><a href="#haut">Réalisation de VictoryEagle</a></footer>
+
+    <script>
+      var DEBUG_MODE = localStorage.getItem('DEBUG_MODE') === 'true';
+      if(!DEBUG_MODE) {
+        (function(i, s, o, g, r, a, m){
+          i['GoogleAnalyticsObject'] = r;
+          i[r] = i[r] || function(){ ((i[r].q = i[r].q) || ([])).push(arguments) }, 
+          a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+          a.async = 1; 
+          a.src = g;
+          m.parentNode.insertBefore(a,m)
+        })
+        (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('send', 'pageview');
+    }
+    </script>
+
+    <script src="./js/Stats.js"></script>
+    <script src="./js/Grid.js"></script>
+    <script src="./js/Fleet.js"></script>
+    <script src="./js/Ship.js"></script>
+    <script src="./js/AI.js"></script>
+    <script src="./js/Game.js"></script>
+    <script src="./js/Main.js"></script>
+  </body>
+</html>

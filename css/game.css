@@ -1,0 +1,149 @@
+#logo img{ width: 400px; }
+
+#rule {
+    padding : 30px;
+    box-shadow : 30px 30px 30px #000;
+    background: linear-gradient(45deg, #000 10%, #111112 100%);
+    background-size : cover;
+    border-radius: 1px;
+    border: 1px solid #888;
+    text-align: left;
+}
+
+.container {
+    width : 75%;
+    position: relative;
+    text-align : center;
+    margin : 0 auto;
+    font-size: 1em;
+}
+.game {
+    position : relative;
+    top : -2em;
+}
+.title {
+    top: 4em;
+    position : relative;
+    background: linear-gradient(45deg, #111112 10%, #000 100%);
+    border : #500 solid 1px;
+    border-radius: 5px;
+}
+#rotate, #reload {
+    width : 200px;
+    padding : 8px;
+    margin : 0 auto;
+    position : relative;
+    background: linear-gradient(45deg, #000 10%, #111112 100%);
+    top : 4em;
+    border-radius: 3px;
+    border: 1px solid #666;
+    margin-bottom: 20px;
+}
+#rotate h3, #reload h3 {
+    padding : 10px;
+    margin : 0.8em 0.6em 1em 0.6em;
+    text-align : center;
+    border : #500 solid 1px;
+    border-radius: 3px;
+    background-color: #111;
+    box-shadow : 5px 5px 5px #000;
+}
+.fleet {
+    position : relative;
+    margin : 0;
+    padding : 0;
+    list-style : none;
+    color : silver;
+    font-size : 20px;
+}
+.fleet {
+    opacity : 1;
+    transition : opacity 0.5s ease-out;
+}
+.fleet li { margin : 0.5em 0; }
+.fleet li:hover {
+    color : #fff;
+    cursor : pointer;
+}
+.fleet li:active {
+    color : #800;
+}
+.fleet .placed {
+    visibility : hidden;
+    opacity : 0;
+    transition : all 0.4s ease-in;
+}
+.invisible {
+    opacity : 0;
+    transition : opacity 0.4s ease-in;
+    z-index : -20;
+}
+.hidden { display : none; }
+.area {
+    margin : 0 auto;
+    display : block;
+    width : 370px;
+}
+.grid {
+    top: 4em;
+    position: relative;
+    width : 370px;
+    background-color : #355f70;
+    border : #7089d4 solid 3px;
+    border-radius: 3px;
+    box-shadow : 10px 10px 10px #000;
+    margin-bottom: 30px;
+}
+.cell {
+    vertical-align : top;
+    height : 35px;
+    width : 35px;
+    display : inline-block;
+    background : url("../img/water.gif") fixed;
+    margin : 1px;
+}
+.cell:hover {
+    background-color : #cab01d;
+    background-repeat : no-repeat;
+}
+.player .cell:hover {
+    background-color : #333;
+}
+.AI .cell:hover, .AI:hover {
+    cursor : crosshair;
+}
+.grid-ship, .player .grid-ship:hover {
+    background-color : #777;
+    background-repeat : no-repeat;
+}
+.grid-miss, .grid-miss:hover, .player .grid-miss:hover {
+    background : url("../img/ploof.gif") center;
+    background-repeat : no-repeat;
+}
+.grid-hit, .grid-hit:hover, .player .grid-hit:hover {
+    background : url("../img/explosion.gif") center;
+    background-repeat : no-repeat;
+}
+.grid-sunk, .grid-sunk:hover, .player .grid-sunk:hover {
+    background : url("../img/fire.gif") center;
+    background-repeat : no-repeat;
+}
+
+@media all and (max-width: 1024px) {
+    #logo img{ width: 100%; }	
+    .container { 
+        font-size: 0.9em;
+        width: 100%;
+    }
+    #rule{
+        position: relative;
+        margin: 0 auto;
+        width: 75%; 
+    }
+}
+
+@media all and (min-width: 2048px) {
+    #logo img{ width: 600px; }
+    #rule { font-size: 1.2em; }
+    .container { font-size: 1.1em; }
+}

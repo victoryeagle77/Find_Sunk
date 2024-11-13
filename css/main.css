@@ -1,0 +1,46 @@
+html {
+    background: linear-gradient(180deg, #061027, #000) center center no-repeat fixed;
+    background-size : cover;
+}
+
+@font-face {
+    font-family: custom;
+    src: url(sansation_light_V3.woff);
+}
+
+body {
+    font-family: custom;
+    color : #fff;
+    margin : 0 auto;
+    font-size : 1.1em;
+}
+
+h3 { 
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.05em; 
+}
+
+footer {
+    position: fixed;
+    font-size: 0.9em;
+    border-top: 2px solid #500;
+    width : 100%;
+    text-align : center;
+    background: linear-gradient(45deg, #000 10%, #111112 100%);
+    padding : 6px;
+    bottom: 0px;
+}
+
+footer a{
+    color : white;
+    text-decoration : none; 
+}
+
+footer a:hover{ 
+    color : #00bfff; 
+}
+
+@media all and (max-width: 1024px) {	
+    footer { font-size: 0.8em; }
+}
